@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0909">
+  <meta name="description" content="The Shaurma — Багратионовский пр., 7, корп. 20В, Москва. Меню, фотографии, маршрут и телефон для заказов +7 (977) 181-86-44.">
+  <title>The Shaurma — Багратионовский проспект</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="refinements.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#menu">Перейти к меню</a>
+  <header class="header" id="top">
+    <a class="brand" href="#top" aria-label="The Shaurma — на главную"><span class="brand-icon">T</span><span>THE SHAURMA<small>БАГРАТИОНОВСКИЙ, 7</small></span></a>
+    <nav class="nav" aria-label="Основная навигация"><a class="nav-home" href="#top">Главная</a><a href="#menu">Меню</a><a href="#place">Адрес</a><a href="#contact">Контакты</a></nav>
+    <a class="header-phone" href="tel:+79771818644" aria-label="Позвонить для заказа по номеру +7 (977) 181-86-44">Заказать <span aria-hidden="true">↗</span></a>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <div class="eyebrow hero-eyebrow"><span class="red-dot"></span>THE SHAURMA · МОСКВА · БАГРАТИОНОВСКИЙ</div>
+          <h1 id="hero-title"><span>THE</span><span class="red-text">SHAURMA</span><span>МОСКВА.</span></h1>
+          <p>Багратионовский пр., 7, корп. 20В, Москва.<br>Пять позиций в меню и фотографии заведения.</p>
+          <div class="hero-actions"><a class="button primary" href="#menu">Смотреть меню <span aria-hidden="true">↗</span></a><a class="button secondary" href="#place">Как добраться <span aria-hidden="true">↗</span></a></div>
+          <div class="hero-bottom"><span>01 / 03</span><span class="hero-line"></span><span>ЛИСТАЙТЕ ВНИЗ ↓</span></div>
+        </div>
+        <div class="hero-art">
+          <div class="red-orb" aria-hidden="true"></div>
+          <div class="hero-main-photo"><div class="food-crop food-mini" role="img" aria-label="Мини-шаурма"></div></div>
+          <div class="hero-small-photo photo-top"><div class="food-crop food-cheese" role="img" aria-label="Шаурма в сырном лаваше"></div></div>
+          <div class="hero-small-photo photo-bottom"><div class="food-crop food-tandoor" role="img" aria-label="Шаурма в тандырной лепёшке"></div></div>
+          <span class="hero-photo-label">ФОТОГРАФИИ МЕНЮ <span>↗</span></span>
+        </div>
+      </div>
+      <div class="hero-edge"><span>THE SHAURMA · МОСКВА</span><span>БАГРАТИОНОВСКИЙ ПРОЕЗД</span></div>
+    </section>
+    <section class="menu-section section" id="menu" aria-labelledby="menu-title">
+      <div class="section-head"><div><span class="kicker">01 — ПЯТЬ ПОЗИЦИЙ</span><h2 id="menu-title">НАШЕ <span class="red-text">МЕНЮ.</span></h2></div><p>Цена и вес указаны для каждой позиции. Нажмите на блюдо, чтобы открыть фотографию.</p></div>
+      <div class="menu-toolbar"><span class="menu-hint">НАЖМИТЕ НА БЛЮДО, ЧТОБЫ ОТКРЫТЬ ФОТО ↗</span></div>
+      <div class="menu-grid">
+        <button class="menu-card" type="button" data-dish="0" aria-label="Открыть фотографию: Мини-шаурма"><div class="card-photo"><div class="food-crop food-mini" role="img" aria-label="Мини-шаурма"></div><span class="photo-open" aria-hidden="true">↗</span></div><div class="card-bottom"><div><span class="card-note">01 / ШАУРМА</span><h3>Мини-шаурма</h3><div class="card-price"><strong>470 ₽</strong><span>250 г</span></div></div><span class="card-arrow" aria-hidden="true">↗</span></div></button>
+        <button class="menu-card" type="button" data-dish="1" aria-label="Открыть фотографию: Шаурма в сырном лаваше"><div class="card-photo"><div class="food-crop food-cheese" role="img" aria-label="Шаурма в сырном лаваше"></div><span class="photo-open" aria-hidden="true">↗</span></div><div class="card-bottom"><div><span class="card-note">02 / ШАУРМА</span><h3>Шаурма в сырном лаваше</h3><div class="card-price"><strong>530 ₽</strong><span>320 г</span></div></div><span class="card-arrow" aria-hidden="true">↗</span></div></button>
+        <button class="menu-card" type="button" data-dish="2" aria-label="Открыть фотографию: Шаурма в тандырной лепёшке"><div class="card-photo"><div class="food-crop food-tandoor" role="img" aria-label="Шаурма в тандырной лепёшке"></div><span class="photo-open" aria-hidden="true">↗</span></div><div class="card-bottom"><div><span class="card-note">03 / ШАУРМА</span><h3>Шаурма в тандырной лепёшке</h3><div class="card-price"><strong>560 ₽</strong><span>400 г</span></div></div><span class="card-arrow" aria-hidden="true">↗</span></div></button>
+        <button class="menu-card" type="button" data-dish="3" aria-label="Открыть фотографию: Шаурма стандартная в лаваше"><div class="card-photo"><div class="food-crop food-standard" role="img" aria-label="Шаурма стандартная в лаваше"></div><span class="photo-open" aria-hidden="true">↗</span></div><div class="card-bottom"><div><span class="card-note">04 / ШАУРМА</span><h3>Шаурма стандартная в лаваше</h3><div class="card-price"><strong>510 ₽</strong><span>320 г</span></div></div><span class="card-arrow" aria-hidden="true">↗</span></div></button>
+        <button class="menu-card" type="button" data-dish="4" aria-label="Открыть фотографию: Шаурма фирменная в пите"><div class="card-photo"><div class="food-crop food-pita" role="img" aria-label="Шаурма фирменная в пите"></div><span class="photo-open" aria-hidden="true">↗</span></div><div class="card-bottom"><div><span class="card-note">05 / ШАУРМА</span><h3>Шаурма фирменная в пите</h3><div class="card-price"><strong>510 ₽</strong><span>300 г</span></div></div><span class="card-arrow" aria-hidden="true">↗</span></div></button>
+      </div>
+      <div class="menu-note"><span class="red-dot"></span><span>Багратионовский пр., 7, корп. 20В, Москва</span><a href="tel:+79771818644">Для заказов ↗</a></div>
+    </section>
+    <section class="place-section section" id="place" aria-labelledby="place-title"><div class="place-photo"><button class="exterior" type="button" data-gallery="exterior" aria-label="Увеличить фото The Shaurma снаружи"><img src="exterior.png" alt="The Shaurma снаружи, Багратионовский проезд, 7, корпус 20В" loading="lazy" width="1092" height="1397"><span class="exterior-caption">СНАРУЖИ <span aria-hidden="true">↗</span></span></button><button class="interior" type="button" data-gallery="interior" aria-label="Увеличить фото The Shaurma внутри"><img src="interior.png" alt="Интерьер The Shaurma: стойка и витрина" loading="lazy" width="1095" height="1405"><span>ВНУТРИ ↗</span></button></div><div class="place-copy"><span class="kicker">02 — КАК НАЙТИ</span><h2 id="place-title">THE <span class="red-text">SHAURMA</span><br>НА МЕСТЕ.</h2><p>Фото заведения снаружи и внутри.</p><div class="address"><span class="small-label">АДРЕС</span><address>Багратионовский пр.,<br>7, корп. 20В,<br>Москва</address></div><div class="place-actions"><a class="button primary" data-route target="_blank" rel="noopener noreferrer">Построить маршрут <span aria-hidden="true">↗</span></a><button class="text-link" type="button" data-copy="address">Скопировать адрес ⧉</button></div></div></section>
+    <section class="contact-section section" id="contact" aria-labelledby="contact-title"><span class="kicker">ДЛЯ ЗАКАЗОВ</span><h2 id="contact-title">ПОЗВОНИТЕ <span>НАМ.</span></h2><p>Багратионовский пр., 7, корп. 20В, Москва</p><a class="big-phone" href="tel:+79771818644">+7 (977) 181-86-44 <span aria-hidden="true">↗</span></a><button class="text-link copy-phone" type="button" data-copy="phone">Скопировать номер ⧉</button></section>
+  </main>
+  <footer><div class="footer-top"><a class="brand" href="#top"><span class="brand-icon">T</span><span>THE SHAURMA<small>БАГРАТИОНОВСКИЙ, 7</small></span></a><span>МОСКВА · БАГРАТИОНОВСКИЙ ПР., 7, КОРП. 20В</span><a href="#top">НАВЕРХ ↑</a></div><div class="footer-word" aria-hidden="true">THE SHAURMA<span>✳</span></div><div class="footer-bottom"><span>БАГРАТИОНОВСКИЙ, 7</span><a href="tel:+79771818644">+7 (977) 181-86-44</a></div></footer>
+  <div class="mobile-bar"><a href="tel:+79771818644">Заказать ↗</a><a data-route target="_blank" rel="noopener noreferrer">Маршрут ↗</a></div>
+  <dialog id="photo-dialog" aria-labelledby="dialog-title"><div class="dialog-head"><h2 id="dialog-title">Фотография</h2><button type="button" class="dialog-close" aria-label="Закрыть фотографию">✕</button></div><div id="dialog-media"></div><div class="dialog-foot"><p id="dialog-note">Фото The Shaurma.</p><a class="button primary" href="tel:+79771818644">Для заказов ↗</a></div></dialog>
+  <div class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
+

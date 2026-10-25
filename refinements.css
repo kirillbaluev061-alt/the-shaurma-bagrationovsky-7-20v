@@ -1,0 +1,115 @@
+/* The hosting badge is an injected iframe, outside the page's own layout. */
+#nl-badge-frame,
+iframe[title="Powered by Netlify"] { display: none !important; }
+
+.hero-main-photo img,
+.hero-small-photo img { width: 100%; height: 100%; object-fit: cover; }
+.hero-main-photo img { object-position: center; }
+
+.menu-grid {
+  grid-template-columns: 1.18fr 1fr 1fr;
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+}
+.menu-card { display: flex; flex-direction: column; min-width: 0; }
+.menu-card:first-child { grid-row: span 2; }
+.card-photo { flex: 1; aspect-ratio: auto; min-height: 204px; }
+.menu-card:first-child .card-photo { min-height: 485px; }
+.card-photo img { width: 100%; height: 100%; position: absolute; inset: 0; object-fit: cover; transition: transform .35s; }
+.menu-card:hover .card-photo img { transform: scale(1.045); }
+.card-bottom { min-height: 101px; gap: 10px; }
+.menu-hint { color: #b8aaa6; font-size: 11px; letter-spacing: 1.2px; text-align: right; }
+.menu-grid:has(.menu-card[hidden]) { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: auto; }
+.menu-grid:has(.menu-card[hidden]) .menu-card:first-child { grid-row: auto; }
+.menu-grid:has(.menu-card[hidden]) .card-photo { min-height: 275px; }
+.menu-grid:has(.menu-card:nth-child(2)[hidden]) { grid-template-columns: 1fr; }
+.menu-grid:has(.menu-card:nth-child(2)[hidden]) .card-photo { min-height: 380px; }
+
+.brand small { font-size: 9px; letter-spacing: 1.65px; }
+.nav, .header-phone, .button { font-size: 14px; }
+.nav a { font-size: 13px; }
+.eyebrow { font-size: 12px; }
+.hero-bottom, .hero-edge, .hero-photo-label { font-size: 11px; }
+.kicker { font-size: 12px; }
+.section-head p, .menu-note, .place-copy>p, .contact-section p { font-size: 15px; }
+.filter, .text-link { font-size: 14px; }
+.card-note, .small-label, .exterior-caption, .footer-top>span, .footer-top>a:last-child, .footer-bottom { font-size: 11px; }
+.card-bottom h3 { font-size: 28px; }
+
+@media (max-width: 900px) {
+  .menu-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: auto; }
+  .menu-card:first-child { grid-column: span 2; grid-row: auto; }
+  .menu-card:first-child .card-photo { min-height: 340px; }
+  .menu-grid:has(.menu-card[hidden]) .menu-card:first-child { grid-column: auto; }
+  .menu-hint { font-size: 10px; }
+}
+@media (max-width: 700px) {
+  .brand small { font-size: 8px; }
+  .nav a { font-size: 11px; padding: 11px 10px; }
+  .hero-eyebrow { font-size: 10px; white-space: normal; line-height: 1.3; }
+  .hero-edge, .hero-photo-label { font-size: 9px; }
+  .section-head p, .place-copy>p, .contact-section p { font-size: 14px; }
+  .kicker { font-size: 11px; }
+  .filter { font-size: 12px; }
+  .menu-toolbar { display: flex; flex-direction: column; align-items: flex-start; }
+  .menu-hint { font-size: 10px; text-align: left; }
+  .menu-grid,
+  .menu-grid:has(.menu-card[hidden]),
+  .menu-grid:has(.menu-card:nth-child(2)[hidden]) { grid-template-columns: 1fr; grid-template-rows: auto; }
+  .menu-card:first-child { grid-column: auto; grid-row: auto; }
+  .card-photo, .menu-card:first-child .card-photo, .menu-grid:has(.menu-card[hidden]) .card-photo, .menu-grid:has(.menu-card:nth-child(2)[hidden]) .card-photo { flex: none; min-height: 0; aspect-ratio: 1.23; }
+  .card-note, .small-label, .exterior-caption { font-size: 10px; }
+  .card-bottom h3 { font-size: 27px; }
+  .menu-note { font-size: 12px; }
+  .footer-top>span, .footer-top>a:last-child, .footer-bottom { font-size: 9px; }
+}
+
+/* Separate high-resolution food photos keep the dishes sharp in cards, hero and zoom view. */
+.food-crop { width:100%; height:100%; background-repeat:no-repeat; background-size:cover; background-position:center; }
+.food-garlic { background-image:url('food-garlic.png'); background-position:center; background-size:cover; }
+.food-classic { background-image:url('food-classic.png'); background-position:center; background-size:cover; }
+.food-pita { background-image:url('food-pita.png'); background-position:center; background-size:cover; }
+.food-cheese { background-image:url('food-cheese.png'); background-position:center; background-size:cover; }
+.menu-grid { grid-template-columns:repeat(2,minmax(0,1fr)); grid-template-rows:auto; }
+.menu-card:first-child { grid-row:auto; }
+.card-photo,.menu-card:first-child .card-photo { flex:none; min-height:0; aspect-ratio:1.45; }
+.card-bottom { align-items:center; min-height:146px; }
+.card-price { display:flex; align-items:baseline; gap:14px; margin-top:12px; font-size:16px; }
+.card-price strong { color:#fff; font-size:21px; }
+.card-price span { color:#aaa19d; }
+.menu-toolbar { justify-content:flex-end; }
+#dialog-media .food-crop { width:min(720px,calc(100vw - 80px)); height:min(55svh,470px); background-size:cover; background-position:center; }
+.exterior img { width:100%; object-position:center; }
+@media (max-width:700px) {
+  .menu-grid { grid-template-columns:1fr; }
+  .menu-card:first-child { grid-column:auto; }
+  .card-photo,.menu-card:first-child .card-photo { aspect-ratio:1.45; }
+  .card-bottom { min-height:136px; }
+  .menu-toolbar { align-items:flex-start; }
+  #dialog-media .food-crop { width:calc(100vw - 64px); height:40svh; }
+}
+
+/* The Shaurma: five sharp menu panels share one high-resolution source. */
+.food-crop { background-image:url('menu-food-grid.png') !important; background-size:300% 200% !important; background-repeat:no-repeat; }
+.food-mini { background-position:0% 0% !important; }
+.food-cheese { background-position:50% 0% !important; }
+.food-tandoor { background-position:100% 0% !important; }
+.food-standard { background-position:0% 100% !important; }
+.food-pita { background-position:50% 100% !important; }
+.hero-main-photo .food-crop { background-size:300% 200% !important; background-position:0% 0% !important; }
+.hero-small-photo.photo-top .food-crop { background-size:300% 200% !important; background-position:50% 0% !important; }
+.hero-small-photo.photo-bottom .food-crop { background-size:300% 200% !important; background-position:100% 0% !important; }
+.menu-grid { grid-template-columns:repeat(3,minmax(0,1fr)); grid-template-rows:auto; }
+.menu-card:first-child { grid-row:auto; grid-column:auto; }
+.card-photo,.menu-card:first-child .card-photo { flex:none; min-height:0; aspect-ratio:1.42; }
+.card-bottom { align-items:center; min-height:140px; }
+.place-photo { position:relative; padding:0 0 38px 20px; }
+.exterior { aspect-ratio:.88; }
+.interior { position:absolute; width:43%; right:0; bottom:0; z-index:2; padding:0; aspect-ratio:1.15; border:3px solid #181313; border-radius:15px; overflow:hidden; background:#261e1c; transform:rotate(4deg); box-shadow:0 14px 35px #000b; }
+.interior img { width:100%; height:100%; object-fit:cover; transition:transform .3s; }
+.interior:hover img { transform:scale(1.05); }
+.interior span { position:absolute; right:8px; bottom:8px; padding:7px 10px; background:#151010e8; border:1px solid #524442; border-radius:5px; font-size:9px; letter-spacing:1px; }
+#dialog-media img { display:block; max-width:min(720px,calc(100vw - 80px)); max-height:min(55svh,470px); margin:auto; object-fit:contain; }
+@media(max-width:900px) { .menu-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:700px) { .menu-grid { grid-template-columns:1fr; } .card-photo,.menu-card:first-child .card-photo { aspect-ratio:1.38; } .place-photo { padding-left:8px; } .interior { width:47%; } #dialog-media img { max-width:calc(100vw - 64px); max-height:40svh; } }
+
